@@ -2,6 +2,8 @@ import math
 import time
 from tkinter import *
 
+r = 15
+
 class Fibonacci():
     def s5(self, n, r):
         return [(r*i**0.5,((i*360/((5**0.5+1)/2)) % 360)) for i in range(n+1)]
@@ -16,12 +18,9 @@ class Fibonacci():
         self.coordinates = [(x+250,y+250) for x, y in self.coordinates]
 
     def plot_numbers(self, canvas):
-        h = 1
         self.calculate_coordinates(num_points = 200, distance = 15)
         for x, y in self.coordinates:
-            canvas.create_oval(x+7, y+7, x-7, y-7)
-            h += 1
-            time.sleep(0.001)
+            canvas.create_oval(x+r, y+r, x-r, y-r)
 
     def create_gui(self):
         master = Tk()
