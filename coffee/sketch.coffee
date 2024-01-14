@@ -24,8 +24,7 @@ n = 0
 
 window.draw = ->
     background 'gray'
-    n += 1
-    if n > coords.length then n = coords.length
+    if n < coords.length then n += 1
     for i in range n
         {x,y} = coords[i]
         fill if i==n-1 then 'black' else 'white'
