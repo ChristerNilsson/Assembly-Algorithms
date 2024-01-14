@@ -1,6 +1,5 @@
 range = _.range
 print = console.log
-# goldenRatio = (Math.sqrt(5) + 1) / 2
 
 window.setup = -> 
     createCanvas 600,600
